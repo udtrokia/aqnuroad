@@ -1,0 +1,21 @@
+{
+	"https":{
+
+		"key_dir"	: "your https_key_dir", 
+		"cert_dir": "your https_cert_dir"
+	},
+	
+	"mongoDb":{
+
+		"dbName" : "your dbName",
+		"collection" : "your db collection",
+		"DB_CONN_STR" : "your db connection str"
+	},
+
+	"wxSession":{
+		
+		"APPID" : "your APPID",
+		"SECRET" : "your SECRET"
+	}
+	
+}
