@@ -1,5 +1,0 @@
-<!--pages/control/control.wxml-->
-<form class="container" bindsubmit="formSubmit">
-  <textarea class="textarea" placeholder="please input your words" name="textarea"/>
-  <button class="button" form-type="submit"> 发送 </button>
-</form>
