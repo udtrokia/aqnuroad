@@ -16,6 +16,7 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+<<<<<<< HEAD
 
 function checkSession(){
     wx.checkSession({
@@ -87,3 +88,8 @@ module.exports = {
   formatTime: formatTime,
   checkSession : checkSession
 }
+=======
+module.exports = {
+  formatTime: formatTime
+}
+>>>>>>> origin/master

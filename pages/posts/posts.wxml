@@ -1,0 +1,26 @@
+<!--index.wxml-->
+
+<!--note in html is really foolish, it spells too hard, fuck!-->
+
+<template name="indexItem">
+  <view class="post-container">
+    <view class="post-head">
+      <image class="post-icon" src="{{icon}}"></image>
+      <view class='head-text'>
+        <text class="post-author">{{author}}</text>
+        <text class="post-date">{{date}}</text>
+      </view>
+    </view >
+    <view class="post-body">
+      <text class='post-content'>{{msg}}</text>
+    </view>
+  </view>
+</template>
+
+<view class="body" style="height:300px"  bindlongtap="toControl">
+  <block wx:for="{{postArr}}" wx:key wx:for-item="item">
+      <view catchlongtap="toControl">
+        <template is="indexItem" data="{{...item}}" />
+      </view>
+  </block>
+</view>

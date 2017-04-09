@@ -1,10 +1,16 @@
 {
   "pages":[
+<<<<<<< HEAD
     "pages/talk/talk",
     "pages/anke/anke",
     "pages/puzi/puzi",
     "pages/welcome/welcome",
     "pages/control/control"
+=======
+    "pages/posts/posts",
+    "pages/control/control",
+    "pages/welcome/welcome"
+>>>>>>> origin/master
   ], 
   "window":{
     "backgroundTextStyle":"light",
@@ -12,6 +18,7 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black",
     "enablePullDownRefresh":true
+<<<<<<< HEAD
   },
   "tabBar": {
     "list": [{
@@ -30,5 +37,7 @@
       "selectedIconPath":"lib/puzitap.png",
       "text": "铺子"
     }]
+=======
+>>>>>>> origin/master
   }
 }

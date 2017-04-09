@@ -3,7 +3,10 @@ var app = getApp();
 var util = require('../../utils/util.js')
 Page({
   data:{
+<<<<<<< HEAD
       "flag":"false",
+=======
+>>>>>>> origin/master
       "author": 'author',
       "icon" : 'icon',
       "time" : 'time',
@@ -39,11 +42,14 @@ Page({
         author:app.globalData.userInfo.nickName
       },
       success: function(res) {
+<<<<<<< HEAD
         var that = this;
         console.log(that)
         that.setData({
           "flag":true
         })
+=======
+>>>>>>> origin/master
       },
     })            
     wx.navigateBack({
@@ -58,8 +64,11 @@ Page({
       },
       fail:()=>{console.log('failed')}
     })
+<<<<<<< HEAD
   },
   onPullDownRefresh:function(){
     wx.stopPullDownRefresh();
+=======
+>>>>>>> origin/master
   }
 })

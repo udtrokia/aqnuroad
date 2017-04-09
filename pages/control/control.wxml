@@ -1,5 +1,9 @@
 <!--pages/control/control.wxml-->
 <form class="container" bindsubmit="formSubmit">
   <textarea class="textarea" placeholder="please input your words" name="textarea"/>
+<<<<<<< HEAD
   <button class="button" disable="{{flag}}" form-type="submit"> 发送 </button>
+=======
+  <button class="button" form-type="submit"> 发送 </button>
+>>>>>>> origin/master
 </form>
