@@ -1,0 +1,14 @@
+<!--pages/options/options.wxml-->
+
+<template name="options">
+    <view class="classname">
+        <view class="tab">{{tab}}</view>
+    </view>
+</template>
+
+<view class="options">
+  <block wx:for="{{tabs}}" wx:key wx:for-item="tabs">
+    <template is="options" data="{{...tabs}}" />  
+  </block>
+</view>
+

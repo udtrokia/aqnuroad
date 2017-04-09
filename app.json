@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/talk/talk",
+    "pages/anke/anke",
+    "pages/puzi/puzi",
+    "pages/welcome/welcome",
+    "pages/control/control"
+  ], 
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath":"pages/anke/anke",
+      "iconPath":"lib/anke.png",
+      "selectedIconPath":"lib/anketap.png",
+      "text":"安客"
+    },{
+      "pagePath": "pages/talk/talk",
+      "iconPath": "lib/talk.png",
+      "selectedIconPath":"lib/talktap.png",
+      "text":"谈论"
+    },{
+      "pagePath": "pages/puzi/puzi",
+      "iconPath": "lib/puzi.png",
+      "selectedIconPath":"lib/puzitap.png",
+      "text": "铺子"
+    }]
+  }
+}

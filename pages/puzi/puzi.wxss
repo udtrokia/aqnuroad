@@ -1,0 +1,21 @@
+/* pages/options/options.wxss */
+
+page{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.options{
+    display: flex;
+    flex-grow:0;
+    height:80%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab{
+    margin: auto;
+}
