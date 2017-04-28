@@ -2,7 +2,7 @@
 
 
 <view class="myCard">
-    <image class="avatar" bindtap="img" src="{{avatar}}"></image>
+    <image class="avatar" bindtap="chooseImage" src="{{avatar}}"></image>
     <view class="cardInfo">
         <view class="input">{{staff}}</view>
         <view class="input">{{detail}}</view>

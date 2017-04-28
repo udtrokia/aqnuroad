@@ -11,6 +11,9 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    wx.setNavigationBarTitle({
+      title: 'control'
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -25,7 +28,6 @@ Page({
     // 页面关闭
   },
   formSubmit: function(e) {
-    var that = this;
     // msg = e.detail.value
     console.log(e.detail.value.textarea);
     wx.request({
@@ -40,28 +42,25 @@ Page({
         openId:app.globalData.userInfo.openId
       },
       success: function(res) {
-        if(res.data==false){
-          wx.showModal({
-            title: '提示',
-            content: '请注意用词',
-          })
-        }else{
-          that.setData({
-            "flag":true
-          })
-          wx.showToast({
-            title: '成功!',
-            icon: 'success_no_circle',
-            duration: 1000,
-            mask: true,
-          })
-          setTimeout(()=>{
-            wx.navigateBack({
-            })
-          },1000)
-        }
+        var that = this;
+        console.log(that)
+        that.setData({
+          "flag":true
+        })
+        wx.showToast({
+          title: 'success!',
+          icon: 'success',
+          duration: 2000
+        })
       },
     })            
+    wx.navigateBack({
+      url: '../posts/posts',
+      success:()=>{
+        console.log('redirectTo success')
+      },
+      fail:()=>{console.log('failed')}
+    })
   },
   onPullDownRefresh:function(){
     wx.stopPullDownRefresh();

@@ -1,7 +1,10 @@
 /* pages/control/control.wxss */
 
 page{
-    height:100%
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -17,9 +20,9 @@ page{
     margin: 20rpx;
 }
 
-.sumbit{
+.button{
+    margin: 0rpx 50rpx;
     width: 300rpx;
     height:68rpx;
     font-size: 10pt;
-    text-align: center;
 }

@@ -12,6 +12,10 @@ Page({
     var that = this;
     // console.log(app.globalData.userInfo)
     getPuzi(that)
+    that.setData({
+      avatar:app.globalData.userInfo.avatarUrl,
+      name:app.globalData.userInfo.nickName
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -42,7 +46,7 @@ Page({
     console.log('onReachBottom')
     var that = this;
     var page = that.data.page;
-    if(that.data.puziArr.length>=page*5){
+    if(that.data.talkArr.length>=page*5){
       page = page+1
     }else{
       page = page
@@ -60,10 +64,10 @@ Page({
     })
   },
   ankePuzi: function(e){
-    var openId = e.target.dataset.openid
-    var puzi = e.target.dataset.puzi
+    console.log('pass id: '+e.target.dataset.openid);
+    var openId = e.target.dataset.openId
     wx.navigateTo({
-      url: 'ankePuzi/ankePuzi?openId='+openId
+      url: 'ankePuzi/ankePuzi?id='+openId
     })
   }
 })

@@ -3,7 +3,14 @@ var app = getApp();
 var util = require('../../utils/util.js')
 Page({
   data:{
+<<<<<<< HEAD
       "flag":"false",
+=======
+<<<<<<< HEAD
+      "flag":"false",
+=======
+>>>>>>> origin/master
+>>>>>>> 93f714558b490e12104d060c3ed2b2dd2f0f55ef
       "author": 'author',
       "icon" : 'icon',
       "time" : 'time',
@@ -39,11 +46,20 @@ Page({
         author:app.globalData.userInfo.nickName
       },
       success: function(res) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 93f714558b490e12104d060c3ed2b2dd2f0f55ef
         var that = this;
         console.log(that)
         that.setData({
           "flag":true
         })
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> 93f714558b490e12104d060c3ed2b2dd2f0f55ef
       },
     })            
     wx.navigateBack({
@@ -58,8 +74,17 @@ Page({
       },
       fail:()=>{console.log('failed')}
     })
+<<<<<<< HEAD
   },
   onPullDownRefresh:function(){
     wx.stopPullDownRefresh();
+=======
+<<<<<<< HEAD
+  },
+  onPullDownRefresh:function(){
+    wx.stopPullDownRefresh();
+=======
+>>>>>>> origin/master
+>>>>>>> 93f714558b490e12104d060c3ed2b2dd2f0f55ef
   }
 })

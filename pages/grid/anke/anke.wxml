@@ -1,7 +1,7 @@
 
 
 <template name="anke">
-    <view class="anke-card" data-anke="{{anke}}" data-openid="{{openId}}" bindtap="ankeCard">
+    <view class="anke-card" data-openId="{{openId}}" bindtap="ankeCard">
         <image class="anke-icon" src="{{avatar}}"></image>
         <view class="anke-info">
             <text class="anke-text">{{name}}</text>

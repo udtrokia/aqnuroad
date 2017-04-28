@@ -12,6 +12,10 @@ Page({
     
     var that = this;
     getAnke(that)
+    that.setData({
+      avatar:app.globalData.userInfo.avatarUrl,
+      name:app.globalData.userInfo.nickName
+    })
   },
   onReady:function(){
     // 页面渲染完成
@@ -42,7 +46,7 @@ Page({
     console.log('onReachBottom')
     var that = this;
     var page = that.data.page;
-    if(that.data.ankeArr.length>=page*5){
+    if(that.data.talkArr.length>=page*5){
       page = page+1
     }else{
       page = page
@@ -60,10 +64,10 @@ Page({
     })
   },
   ankeCard: function(e){
-    var openId = e.target.dataset.openid;
-    var anke = e.target.dataset.anke;
+    console.log('pass id: '+e.target.dataset.openId);
+    var openId = e.target.dataset.openId;
     wx.navigateTo({
-      url: 'ankeCard/ankeCard?openId='+openId+'&anke='+anke
+      url: 'ankeCard/ankeCard?openId='+openId
     })
   }
 })

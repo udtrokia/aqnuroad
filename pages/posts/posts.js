@@ -1,18 +1,20 @@
 //index.js
 //获取应用实例
 var app = getApp();
-var util = require('../../utils/util.js')
 
 Page({
   data: {
     page:1,
-    api:null,
-    talkArr : []
+    refresh:true,
+    postArr : []
   },
   //事件处理函数
   onLoad: function () {
-    var app = getApp();
     var that = this;
+    wx.setNavigationBarTitle({
+      page : 1,
+      title: 'Leslie'
+    })
     console.log('onload');
     getPosts(that);
 
@@ -24,44 +26,34 @@ Page({
     console.log('onPullDownRefresh')
     that.setData({
       page : page,
-      api:"refresh"
+      resfresh:false
     })
     getPosts(that);
     wx.stopPullDownRefresh()
   },
-  onReachBottom: function(){
+  onReachBottom: function() {
     // Do something when page reach bottom.
     console.log('onReachBottom')
     var that = this;
     var page = that.data.page;
-    if(that.data.talkArr.length>=page*5){
+    if(that.data.postArr.length>=page*5){
       page = page+1
     }else{
       page = page
     }
     that.setData({
       page: page,
-      api:"loadmore"
+      refresh:false
     })
     console.log(that.data.page)
     getPosts(that);
   },
   toControl:function(){
     console.log('toControl')
-    if(app.globalData.userInfo.nickName){
-      wx.navigateTo({
-        url:"control/control"
-      })
-    }else{
-      util.login();
-    }
-  },
-  onShareAppMessage: function () {
-    return {
-      title: '安客铺子',
-      path: '/page/talk/talk',
-    }
-  } 
+    wx.navigateTo({
+      url:"/pages/control/control"
+    })
+  }
 })
 
 var getPosts = function(that){
@@ -71,13 +63,13 @@ var getPosts = function(that){
         'content-type': 'application/json'
       },
       data:{
-        'col':'talkArr',
         'page':that.data.page,
-        "api" : "refresh"
+        'refresh':that.data.refresh
       },
       success: function(res) {
         console.log(res.data)
-        that.setData({talkArr:res.data})
+          that.setData({postArr:res.data})
       }
     })
   } 
+

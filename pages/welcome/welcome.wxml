@@ -1,6 +1,16 @@
 <!--index.wxml-->
+<<<<<<< HEAD
 <view class="container" bindtap="bindViewTap">
   <view class="userinfo">
+=======
+<<<<<<< HEAD
+<view class="container" bindtap="bindViewTap">
+  <view class="userinfo">
+=======
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+>>>>>>> origin/master
+>>>>>>> 93f714558b490e12104d060c3ed2b2dd2f0f55ef
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>

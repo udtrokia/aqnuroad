@@ -68,12 +68,16 @@ function login(){
                             },
                             success: function(reqRes){
                                 try {
+                                    console.log('session from server: '+reqRes.data.session)
                                     wx.setStorageSync('session', reqRes.data.session)
                                     wx.setStorageSync('userInfo', reqRes.data.userInfo)
                                     app.globalData.userInfo = reqRes.data.userInfo
+                                    console.log("server return"+app.globalData.userInfo)
                                 } catch (e) {    
                                     console.log(e);
                                 }
+                                console.log("session: "+reqRes.data.session)
+                                console.log('userInfo: '+ reqRes.data.userInfo)
                             },
                             complete:()=>{
                                 var app=getApp();

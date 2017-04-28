@@ -11,7 +11,6 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-
     var that = this;
     wx.request({
       url: 'https://udtrokia.com/export',
@@ -21,22 +20,17 @@ Page({
         whereStr :{"openId":options.openId}        
       },
       success:function(res){
-        if(res.data){
-          var data = res.data[0]
-          that.setData({
-            name:data.name,
-            sex:data.sex,
-            age:data.age,
-            hobby:data.hobby,
-            avatar:data.avatar,
-            desire:data.desire,
-            work:data.work,
-            weChat:data.weChat
-          })
-        }
-      },
-      fail:function(res){
-        console.log('failfailfaiififififi')
+        var data = res.data[0]
+        that.setData({
+          name:data.name,
+          sex:data.sex,
+          age:data.age,
+          hobby:data.hobby,
+          avatar:data.avatar,
+          desire:data.desire,
+          work:data.work,
+          weChat:data.weChat
+        })
       },
       method: 'GET'
     })

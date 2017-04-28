@@ -1,9 +1,5 @@
-
-
 <!--pages/control/control.wxml-->
-
-
 <form class="container" bindsubmit="formSubmit">
-  <textarea class="textarea" placeholder="请输入需要发送的消息" name="textarea"/>
-  <button plain='true' class="sumbit" disable="{{flag}}" form-type="submit"> 发送 </button>
+  <textarea class="textarea" placeholder="please input your words" name="textarea"/>
+  <button plain='true' class="button" disable="{{flag}}" form-type="submit"> 发送 </button>
 </form>

@@ -26,31 +26,24 @@ Page({
       },
       success:function(res){
         var data = res.data[0]
-        if(data){
-          that.setData({
-            name:data.name,
-            sex:data.sex,
-            age:data.age,
-            hobby:data.hobby,
-            desire:data.desire,
-            work:data.work,
-            openId:data.openId,
-            avatar:data.avatar,
-            weChat:data.weChat
-          })
-        }else{
-          console.log('no data')
-        }
-      },
-      fail:(res)=>{
-        console.log('fail')
-        console.log(res.data)
+        that.setData({
+          name:data.name,
+          sex:data.sex,
+          age:data.age,
+          hobby:data.hobby,
+          desire:data.desire,
+          work:data.work,
+          openId:data.openId,
+          avatar:data.avatar,
+          weChat:data.weChat
+        })
       },
       method: 'GET'
     })
   },
   chooseImage : function(e){
     var that = this;
+    console.log(app.globalData.userInfo.openId)
       wx.chooseImage({
       count: 1, 
       sizeType: ['original', 'compressed'],
@@ -66,11 +59,14 @@ Page({
           },
           success: function(res){
             var avatar = res.data
+            console.log(res.data)
             that.setData({
               avatar:avatar
             })
+            console.log(that.data.avatar)
           },
           fail:function(res){
+            console.log('fail: '+res.data)
           }
         })
       }
@@ -78,6 +74,7 @@ Page({
   },
   updateAnke :function(e){
     var that = this;
+    console.log(e.detail.value.avatar)
     wx.request({
       url: 'https://udtrokia.com/import',
       data: {
@@ -96,26 +93,19 @@ Page({
         col:'ankeArr',
         api:'update'
       },
-      method: 'GET',
       success:function(res){
-        console.log(res)
-        if(res.data==false){
-          wx.showModal({
-            title: '提示',
-            content: '请注意用词',
-          })
-        }else{
           wx.showToast({
-            title: '成功!',
+            title: 'success!',
             icon: 'success',
-            duration: 1000,
-            mask: true,
+            duration: 2000
           })
-          setTimeout(()=>{
-            wx.navigateBack({
-            })
-          },1000)
-        }
+      },
+      method: 'GET',
+    })
+    wx.navigateBack({
+      url: '../posts/posts',
+      success:()=>{
+        console.log('redirectTo success')
       }
     })
   }

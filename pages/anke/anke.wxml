@@ -8,8 +8,8 @@
 
 <import src="/pages/grid/anke/anke.wxml"/>
 
-<view wx:key wx:for="{{ankeArr}}" wx:for-item="anke">
-    <template is="anke" data="{{...anke}}" />
+<view wx:key wx:for="{{ankeArr}}" data-openId='{{openId}}' bindtap="ankeCard" wx:for-item="anke">
+<template is="anke" data="{{...anke}}" />
 </view>
 
 

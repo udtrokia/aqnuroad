@@ -13,7 +13,7 @@ page{
 }
 
 .avatar{
-    margin-top: 320rpx;
+    margin-top: 160rpx;
     height: 112rpx;
     width: 112rpx;
     border-radius: 50%

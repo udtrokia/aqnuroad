@@ -17,21 +17,18 @@ Page({
       data: {
         col :'puziArr',
         api :"select",
-        whereStr :{"openId":app.globalData.userInfo.openId}        
+        whereStr :{"id":app.globalData.userInfo.openId}        
       },
       success:function(res){
         var data = res.data[0]
-        if(data){
-          that.setData({
-            avatar : data.avatar,
-            staff:data.staff,
-            'require':data.require,
-            detail:data.detail,
-            weChat:data.weChat
-          })
-        }else{
-          console.log('no data')
-        }
+        console.log(data.avatar)
+        that.setData({
+          avatar : data.avatar,
+          staff:data.staff,
+          'require':data.require,
+          detail:data.detail,
+          weChat:data.weChat
+        })
       },
       method: 'GET'
     })
@@ -55,25 +52,17 @@ Page({
         api:'update'
       },
       success:function(res){
-        if(res.data==false){
-          wx.showModal({
-            title: '提示',
-            content: '请注意用词',
-          })
-        }else{
           wx.showToast({
-            title: '成功!',
-            icon: 'success_no_circle',
-            mask:true,
-            duration: 1000
+            title: 'success!',
+            icon: 'success',
+            duration: 2000
           })
-          setTimeout(()=>{
-            wx.navigateBack({
-            })
-          },1000)
-        }
       },
       method: 'GET',
+    })
+    wx.navigateBack({
+      success:()=>{},
+      fail:()=>{console.log('failed')}
     })
   },
   chooseImage : function(e){
