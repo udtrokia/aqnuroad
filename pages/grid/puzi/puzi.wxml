@@ -1,0 +1,11 @@
+
+
+<template name="anke">
+    <view class="anke-card" data-openid="{{openId}}" bindtap="ankePuzi">
+        <image class="anke-icon" src="{{avatar}}"></image>
+        <view class="anke-info">
+            <text class="anke-text">{{staff}}</text>
+            <text class="anke-text">{{require}}</text>
+        </view>
+    </view >
+</template>

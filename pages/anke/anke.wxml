@@ -1,0 +1,15 @@
+<!--pages/anke/anke.wxml-->
+
+
+<view class="card-container" bindtap="myCard">
+    <image class="card-icon" src="/lib/anketap.png"></image>
+</view >
+
+
+<import src="/pages/grid/anke/anke.wxml"/>
+
+<view wx:key wx:for="{{ankeArr}}" wx:for-item="anke">
+    <template is="anke" data="{{...anke}}" />
+</view>
+
+

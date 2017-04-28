@@ -1,0 +1,66 @@
+/* pages/anke/anke.wxss */
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1rpx solid #ededed;
+    height:420rpx;
+    align-items: center;
+    justify-content: center;
+    margin: 20rpx;
+
+}
+
+.card-info{
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12pt;
+  margin: 30rpx;
+}
+
+.card-icon{
+  height:188rpx;
+  width:188rpx;
+  margin: 10rpx
+}
+
+
+
+
+.anke-card{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ededed;
+  height:200rpx;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx
+}
+
+.anke-icon{
+  height:108rpx;
+  width:108rpx;
+  border-radius: 50%;
+  margin: 10rpx
+}
+
+.anke-info{
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 8pt;
+  margin: 20rpx;
+}
+
+.anke-text{
+  margin:5rpx;
+  font-size: 10pt;
+}

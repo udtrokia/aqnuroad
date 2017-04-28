@@ -1,0 +1,19 @@
+
+<!--template-->
+
+<template name="talk">
+  <view class="post-container">
+
+      <view class="post-head">
+        <image class="post-icon" src="{{avatar}}"></image>
+        <view class="head-content">
+          <text class="post-author">{{author}}</text>
+          <text class="post-date">{{date}}</text>
+        </view>
+      </view >
+
+      <view class="post-body">
+        <text class='post-content'>{{msg}}</text>
+      </view>
+    </view>
+</template>

@@ -1,0 +1,15 @@
+<!--pages/anke/anke.wxml-->
+
+
+<view class="card-container" bindtap="myPuzi">
+    <image class="card-icon" src="/lib/puzitap.png"></image>
+</view >
+
+
+<import src="/pages/grid/puzi/puzi.wxml"/>
+
+<view wx:key wx:for="{{puziArr}}" wx:for-item="puzi">
+<template is="anke" data="{{...puzi}}" />
+</view>
+
+

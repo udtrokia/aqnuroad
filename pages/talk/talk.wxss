@@ -1,0 +1,14 @@
+/**index.wxss**/
+@import "/pages/grid/talk/talk.wxss";
+
+.post{
+    margin: 20rpx;
+}
+
+.wholePage{
+    height: 100%;
+}
+
+page{
+    height: 100%;
+}

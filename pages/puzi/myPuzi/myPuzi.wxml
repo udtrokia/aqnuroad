@@ -1,0 +1,15 @@
+<!--pages/anke/myCard/myCard.wxml-->
+
+
+<view class="myCard">
+    <image class="avatar" bindtap="chooseImage" src="{{avatar}}"></image>
+    <form bindsubmit="updatePuzi" class="cardInfo">
+        <input name="staff" placeholder='闲置' placeholder-class='ph' class="input" value="{{staff}}" disabled='{{disabled}}'></input>
+        <input name="detail" placeholder="简介" placeholder-class='ph' class="input" value="{{detail}}" disabled='{{disabled}}'></input>
+        <input name="require" placeholder="需求" placeholder-class='ph' class="input" value="{{require}}" disabled='{{disabled}}'></input>
+        <input name="weChat" placeholder="微信号" placeholder-class='ph' class="input" value="{{weChat}}" disabled='{{disabled}}'></input>
+        <button plain='true' class="submit" form-type="submit" disabled="{{flag}}"> 更新 </button>
+    </form>
+</view >
+
+

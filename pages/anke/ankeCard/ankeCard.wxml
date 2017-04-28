@@ -1,0 +1,17 @@
+<!--pages/anke/myCard/myCard.wxml-->
+
+
+<view class="myCard">
+    <image class="avatar" bindtap="img" src="{{avatar}}"></image>
+    <view class="cardInfo">
+        <view class="input">{{name}}</view>
+        <view class="input">{{sex}}</view>
+        <view class="input">{{age}}</view>
+        <view class="input">{{hobby}}</view>
+        <view class="input">{{desire}}</view>
+        <view class="input">{{work}}</view>
+        <view class="input">{{weChat}}</view>
+    </view>
+</view >
+
+

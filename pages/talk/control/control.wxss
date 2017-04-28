@@ -1,0 +1,25 @@
+/* pages/control/control.wxss */
+
+page{
+    height:100%
+}
+
+.container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx;
+    align-content: center
+}
+.textarea{
+
+    padding: 20rpx;
+    margin: 20rpx;
+}
+
+.sumbit{
+    width: 300rpx;
+    height:68rpx;
+    font-size: 10pt;
+    text-align: center;
+}

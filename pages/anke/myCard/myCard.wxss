@@ -1,0 +1,52 @@
+/* pages/anke/myCard/myCard.wxss */
+
+page{
+    height:100%
+}
+
+.myCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.avatar{
+    margin-top: 160rpx;
+    height: 112rpx;
+    width: 112rpx;
+    border-radius: 50%
+}
+
+.cardInfo{
+    margin-top: 60rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.ph{
+    text-align: center;
+}
+
+.input{
+    text-align: center;
+    height:60rpx;
+    margin: 10rpx;
+}
+
+.switch{
+    text-align: center;
+    height:30rpx;
+    margin-top: 30rpx;
+    width: 100%;
+}
+
+.submit{
+    text-align: center;
+    margin-top: 80rpx;
+    font-size:10pt;
+    height: 60rpx;
+    line-height: 60rpx;
+    width:200rpx;
+}

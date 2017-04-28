@@ -1,0 +1,50 @@
+
+/*tempate.css*/
+
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1rpx solid #ededed;
+    width: 100%;
+}
+
+.post-head{
+  display: flex;
+  margin: 20rpx 20rpx 0rpx 20rpx;
+  height:130rpx;
+  padding-top: 10rpx;
+}
+
+.post-icon{
+  height:108rpx;
+  width:108rpx;
+  border-radius: 50%;
+}
+
+
+.post-author{
+  display: block;
+  margin: 20rpx 0rpx 0rpx 30rpx;
+  font-size: 12pt;
+}
+
+.post-date{
+  display:block;
+  margin: 10rpx 0rpx 0rpx 30rpx;
+  font-size: 8pt;
+}
+
+.post-body{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 20rpx 10rpx;
+  padding-bottom: 30rpx; 
+}
+
+.post-content{
+  font-size:12pt;
+  word-break:break-all;
+}
+
